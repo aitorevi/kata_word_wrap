@@ -30,6 +30,11 @@ describe('WordWrap test suit', () => {
 
     })
     // ("longWord", 4) -> "long--Word"
+    it('the word is longer than the number of columns', () => {
+
+      expect(wrap("longWord", 4)).toBe("long\nWord")
+
+    })
 
     // ("supercalifragilisticoespialidoso", 6) -> "superc--alifra--gilist--icoesp--ialido--so"
 
