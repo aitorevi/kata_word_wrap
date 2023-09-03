@@ -16,14 +16,19 @@ describe('WordWrap test suit', () => {
 
     })
 
-    // ("Hello World", 4) -> "Hello--World"
+    // // ("Hello World", 4) -> "Hello--World"
+    // it('text is wider than the number of columns', () => {
+    //
+    //   expect(wrap("Hello World", 4)).toBe("Hello\nWorld")
+    //
+    // })
+
+    // ("a longWord", 8) -> "a--longWord"
     it('text is wider than the number of columns', () => {
 
-      expect(wrap("Hello World", 4)).toBe("Hello/nWorld")
+      expect(wrap("a longWord", 8)).toBe("a\nlongWord")
 
     })
-    // ("a longWord", 8) -> "a--longWord"
-
     // ("longWord", 4) -> "long--Word"
 
     // ("supercalifragilisticoespialidoso", 6) -> "superc--alifra--gilist--icoesp--ialido--so"
