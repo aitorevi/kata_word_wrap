@@ -37,6 +37,11 @@ describe('WordWrap test suit', () => {
     })
 
     // ("supercalifragilisticoespialidoso", 6) -> "superc--alifra--gilist--icoesp--ialido--so"
+    it('the word is greater than the number of columns and several line breaks are added', () => {
+
+      expect(wrap("supercalifragilisticoespialidoso", 6)).toBe("superc\nalifra\ngilist\nicoesp\nialido\nso")
+
+    })
 
     // ("a longWord", 6) -> "a long--Word"
 

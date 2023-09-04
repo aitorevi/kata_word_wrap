@@ -3,8 +3,18 @@ export const wrap = (text: string, width: number): string => {
     return "";
   }
   if (text.length > width) {
-    const newText = text.replace(" ", "\n")
-    return newText
+    let newText = ""
+    if (text.includes(" ") && text.indexOf(" ") < width){
+      newText = text.replace(" ", "\n")
+    }else {
+      // let startIndex = 0
+      let endIndex = width
+      for (let startIndex = 0; startIndex < text.length; startIndex += width){
+        newText += `${text.substring(startIndex,endIndex)}\n`
+        endIndex += width
+      }
+    }
+    return newText.trim()
   }
   return text;
 
