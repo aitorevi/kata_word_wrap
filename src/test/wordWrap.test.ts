@@ -30,7 +30,7 @@ describe('WordWrap test suit', () => {
 
     })
     // ("longWord", 4) -> "long--Word"
-    it('the word is longer than the number of columns', () => {
+    it('the word is greater than the number of columns and a line break is added', () => {
 
       expect(wrap("longWord", 4)).toBe("long\nWord")
 
